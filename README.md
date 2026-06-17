@@ -8,7 +8,7 @@ Hệ thống được thiết kế theo kiến trúc phân tán gồm 2 Node, gi
 - **Node A (Trạm quan trắc & AI dự đoán):** Đóng vai trò thu thập dữ liệu môi trường, chạy mô hình học máy cục bộ (TinyML) để đưa ra dự báo và đẩy log lên cơ sở dữ liệu đám mây (InfluxDB).
 - **Node B (Trạm điều khiển trung tâm):** Chịu trách nhiệm trực tiếp điều khiển động cơ giàn phơi, đọc các cảm biến vật lý tức thời (cảm biến mưa, ánh sáng, công tắc hành trình) và kết nối với nền tảng đám mây Blynk để cung cấp giao diện cho người dùng.
 
-![Sơ đồ kiến trúc](.github/assets/so%20do%20kien%20truc.jpg)
+![Sơ đồ kiến trúc](docs/assets/so%20do%20kien%20truc.jpg)
 
 ## 3. Từ Data đến Model và Tích hợp phần cứng
 Quá trình xây dựng và đưa mô hình trí tuệ nhân tạo xuống thiết bị IoT biên (Edge AI) được thực hiện qua các bước:
@@ -48,10 +48,10 @@ Hệ thống vận hành theo 2 chế độ độc lập và cho phép chuyển 
 Thực hiện đấu nối linh kiện điện tử cho 2 Node theo sơ đồ Breadboard thực tế dưới đây:
 
 **Node A (Cụm Cảm biến & Vi điều khiển AI):**
-![Mạch lắp ráp Node A](.github/assets/node%20A%20breadboard.png)
+![Mạch lắp ráp Node A](docs/assets/node%20A%20breadboard.png)
 
 **Node B (Cụm Điều khiển Động cơ & Nút nhấn):**
-![Mạch lắp ráp Node B](.github/assets/node%20B%20breadboard.png)
+![Mạch lắp ráp Node B](docs/assets/node%20B%20breadboard.png)
 
 ### Cấu hình phần mềm
 1. **Môi trường & Thư viện:** Sử dụng Arduino IDE có cài đặt core ESP32. Đảm bảo đã cài đặt các thư viện: `WiFi`, `InfluxDbClient`, `EloquentTinyML`, `Adafruit_BMP085`, `DHT`, `BlynkSimpleEsp32`.
@@ -70,4 +70,4 @@ Thực hiện đấu nối linh kiện điện tử cho 2 Node theo sơ đồ Br
 - Switch điều hướng chế độ: Tự động (Auto) / Thủ công (Manual).
 - Control Panel: Phím cứng ảo hỗ trợ Kéo ra / Thu vào trực tiếp từ smartphone.
 
-![Giao diện Blynk](.github/assets/Giao%20dien.png)
+![Giao diện Blynk](docs/assets/Giao%20dien.png)
